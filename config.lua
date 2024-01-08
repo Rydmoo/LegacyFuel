@@ -3,6 +3,10 @@ Config = {}
 -- Are you using ESX? Turn this to true if you would like fuel & jerry cans to cost something.
 Config.UseESX = true
 
+-- VMS MODITICATIONS:
+Config.AbilityStealFuel = false
+
+
 -- What should the price of jerry cans be?
 Config.JerryCanCost = 100
 Config.RefillCost = 50 -- If it is missing half of it capacity, this amount will be divided in half, and so on.
@@ -13,18 +17,13 @@ Config.FuelDecor = "_FUEL_LEVEL"
 -- What keys are disabled while you're fueling.
 Config.DisableKeys = {0, 22, 23, 24, 29, 30, 31, 37, 44, 56, 82, 140, 166, 167, 168, 170, 288, 289, 311, 323}
 
--- Want to use the HUD? Turn this to true.
-Config.EnableHUD = true
-
 -- Configure blips here. Turn both to false to disable blips all together.
 Config.ShowNearestGasStationOnly = true
 Config.ShowAllGasStations = false
 
--- Modify the fuel-cost here, using a multiplier value. Setting the value to 2.0 would cause a doubled increase.
-Config.CostMultiplier = 1.0
-
 -- Configure the strings as you wish here.
 Config.Strings = {
+	StealedFuel = "A vehicle with %s license plate number was registered and drove away from the gas station without paying for %sL of fuel.",
 	ExitVehicle = "Exit the vehicle to refuel",
 	EToRefuel = "Press ~g~E ~w~to refuel vehicle",
 	JerryCanEmpty = "Jerry can is empty",
@@ -33,16 +32,11 @@ Config.Strings = {
 	CancelFuelingPump = "Press ~g~E ~w~to cancel the fueling",
 	CancelFuelingJerryCan = "Press ~g~E ~w~to cancel the fueling",
 	NotEnoughCash = "Not enough cash",
+	NotEnoughFuel = "Lack of fuel",
 	RefillJerryCan = "Press ~g~E ~w~ to refill the jerry can for ",
 	NotEnoughCashJerryCan = "Not enough cash to refill jerry can",
 	JerryCanFull = "Jerry can is full",
-	TotalCost = "Cost",
 }
-
-if not Config.UseESX then
-	Config.Strings.PurchaseJerryCan = "Press ~g~E ~w~to grab a jerry can"
-	Config.Strings.RefillJerryCan = "Press ~g~E ~w~ to refill the jerry can"
-end
 
 Config.PumpModels = {
 	[-2007231801] = true,
