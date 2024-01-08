@@ -6,6 +6,7 @@ Started off as my first script, and for whatever reason, I decided to release it
 2) Drag & drop the folder into your `resources` server folder.
 3) Configure the config file to your liking.
 4) Add `start LegacyFuel` to your server config.
+5) Add `start vms_stores` to your server config.
 
 ### Exports
 There are currently two (client-sided) exports available, which should help you control the fuel level for vehicles whenever needed.
