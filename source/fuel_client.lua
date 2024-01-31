@@ -18,6 +18,7 @@ local fuelCount = 0
 AddEventHandler('vms_stores:enterStoreZone', function(storeId)
 	paidForFuel = false
 	currentStore = storeId
+	storeFuel = 9999999
 end)
 
 RegisterNetEvent('vms_stores:fuelStoreUpdated', function(storeId, fuel)
